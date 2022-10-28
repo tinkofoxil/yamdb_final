@@ -22,3 +22,13 @@ jobs:
     - name: Test with flake8 and django tests
       run: |
         python -m flake8
+
+  send_message:
+    runs-on: ubuntu-latest
+    steps:
+    - name: send message
+      uses: appleboy/telegram-action@master
+      with:
+        to: ${{ secrets.TELEGRAMM_TO }}
+        token: ${{ secrets.TELEGRAMM_TOKEN }}
+        message: ${{ github.workflow }} успешно выполнен
