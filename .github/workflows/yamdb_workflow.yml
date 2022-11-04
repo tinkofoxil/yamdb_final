@@ -19,12 +19,12 @@ jobs:
         pip install flake8 pep8-naming flake8-broken-line flake8-return flake8-isort
         pip install -r api_yamdb/requirements.txt 
 
-    - name: Creating .env
-      script: |
-        cd api_yamdb/
-        touch .env
-        echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
-        cd ..
+    #- name: Creating .env
+    #  run: |
+    #    cd api_yamdb/
+    #    touch .env
+    #    echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
+    #    cd ..
 
     - name: Test with flake8 and django tests
       run: |
