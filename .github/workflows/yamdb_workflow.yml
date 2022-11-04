@@ -20,7 +20,7 @@ jobs:
         pip install -r api_yamdb/requirements.txt 
 
     - name: Creating .env
-      run: |
+      script: |
         cd api_yamdb/
         touch .env
         echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
