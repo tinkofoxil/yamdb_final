@@ -1,3 +1,5 @@
+![example workflow](https://github.com/tinkofoxil/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+
 # INFRA_SP2
 
 Цель работы над проектом - получить опыт работы с Docker.
@@ -50,5 +52,3 @@
    docker-compose exec web python manage.py loaddata fixtures.json
    docker-compose exec web python manage.py collectstatic --no-input
    ```
-
-![example workflow](https://github.com/tinkofoxil/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
